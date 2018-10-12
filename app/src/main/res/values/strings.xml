@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">AcDat</string>
+    <string name="tvEuros">Euros</string>
+    <string name="tvDolares">Dolares</string>
+    <string name="rbEuroDolar">Euros a Dolares</string>
+    <string name="rbDolarEuro">Dolares a Euros</string>
+    <string name="btnEj1">Ejercicio 1</string>
+    <string name="btnEj2">Ejercicio 2</string>
+    <string name="btnEj3">Ejercicio 3</string>
+    <string name="btnEj4">Ejercicio 4</string>
+</resources>

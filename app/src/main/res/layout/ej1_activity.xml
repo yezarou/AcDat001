@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <TextView
+        android:id="@+id/tvEuros"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:text="@string/tvEuros"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+        app:layout_constraintBottom_toBottomOf="@+id/edEuro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/edEuro"
+        app:layout_constraintTop_toTopOf="@+id/edEuro" />
+
+    <TextView
+        android:id="@+id/tvDolares"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:text="@string/tvDolares"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/edDollar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/edDollar"
+        app:layout_constraintTop_toTopOf="@+id/edDollar" />
+
+    <EditText
+        android:id="@+id/edEuro"
+        android:layout_width="252dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/edDollar"
+        app:layout_constraintEnd_toStartOf="@+id/tvEuros"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edDollar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:enabled="false"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/rgConvert"
+        app:layout_constraintEnd_toStartOf="@+id/tvDolares"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edEuro" />
+
+    <RadioGroup
+        android:id="@+id/rgConvert"
+        android:layout_width="210dp"
+        android:layout_height="111dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintStart_toStartOf="@+id/edDollar"
+        app:layout_constraintTop_toBottomOf="@+id/edDollar">
+
+        <RadioButton
+            android:id="@+id/rbEuroDolar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="@string/rbEuroDolar" />
+
+        <RadioButton
+            android:id="@+id/rbDolarEuro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="false"
+            android:text="@string/rbDolarEuro" />
+    </RadioGroup>
+</android.support.constraint.ConstraintLayout>
